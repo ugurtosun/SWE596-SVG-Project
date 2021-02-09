@@ -688,6 +688,80 @@ function button12(isDirectCall, isAnimated){
     if(isAnimated){
         animationDuration = 1000;
     }
+
+    var codeStack = s.rect(400, 250, 300, 600, 40);
+    codeStack.attr({
+        id : 'codeStack',
+        fill: 'orange',
+        stroke: 'orange',
+        strokeOpacity: .3,
+        strokeWidth: 10
+    });
+
+    var textStack = s.text(500, 330, "STACK").attr({id: 'textStack', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
+
+    var line = s.line(400, 700, 400, 700);
+
+    line.attr({
+        stroke: "#000",
+        strokeWidth: 2
+    });
+
+    line.animate({x2: 700}, animationDuration);
+
+    var textM1 = s.text(430, 780, "m1").attr({id: 'textM1', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+    var textX = s.text(600, 780, "x").attr({id: 'textX', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+
+    var line2 = s.line(400, 600, 400, 600);
+    line2.attr({
+        stroke: "#000",
+        strokeWidth: 2
+    });
+    line2.animate({x2: 700}, animationDuration);
+
+    var textM2= s.text(430, 660, "m2").attr({id: 'textM2', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+
+    var textBC = s.text(600, 660, "b   c").attr({id: 'textBC', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+    var line3 = s.line(400, 500, 400, 500);
+    line3.attr({
+        stroke: "#000",
+        strokeWidth: 2
+    });
+    line3.animate({x2: 700}, animationDuration);
+
+    var textM3= s.text(430, 560, "m3").attr({id: 'textM3', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+
+    var textRef = s.text(600, 560, "ref").attr({id: 'textRef', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+    var g = s.g();
+    var image = g.image("assets/heap.svg", 850, 300, 400,400);
+
+
+    var textHeap = s.text(900, 330, "HEAP").attr({id: 'textHeap', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
+
+    var rectangleBackground1 = s.rect(980, 430, 150, 70, 10);
+
+    rectangleBackground1.attr({
+        id : 'object',
+        fill: 'yellow',
+        stroke: 'yellow',
+        strokeOpacity: .3,
+        strokeWidth: 10
+    });
+
+
+    var textPQ = s.text(1000, 470, "p       q").attr({id: 'textPQ', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+    var line3 = s.line(700, 550, 700, 470);
+    line3.attr({
+        stroke: "blue",
+        strokeWidth: 10
+    });
+    line3.animate({x2: 980}, animationDuration);
+
+
 }
 
 function button13(isDirectCall, isAnimated){
