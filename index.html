@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div class="myDiv">
+    <h1>Welcome Online Education System</h1>
+</div>
+
+<p id="topic"></p>
+
+<svg style="align-content: center" height="600px" width="100%" id="svg"></svg>
+
+<script>
+    page1Step1();
+</script>
+
+<div class="center" id="controlPanel">
+  <!--  <button type="button" id="backButton" class="button" onclick="backEvent()">Back</button>
+    <button type="button" id="previousButton" class="button" onclick="previousEvent()">Previous</button>
+    <button type="button" id="nextButton" class="button" onclick="nextEvent()">Next</button>
+    <button type="button" id="forwardButton" class="button" onclick="forwardEvent()">Forward</button>  -->
+
+    <button class="circleButton" id="backButton" onclick="backEvent()"><<</button>
+    <button class="circleButton" id="previousButton" onclick="previousEvent()"><</button>
+    <button class="circleButton" id="button1" onclick="button1(true)">1</button>
+    <button class="circleButton" id="button2" onclick="button2(true)">2</button>
+    <button class="circleButton" id="button3" onclick="button3(true)">3</button>
+    <button class="circleButton" id="button4" onclick="button4(true)">4</button>
+    <button class="circleButton" id="button5" onclick="button5(true)">5</button>
+    <button class="circleButton" id="button6" onclick="button6(true)">6</button>
+    <button class="circleButton" id="button7" onclick="button7(true)">7</button>
+    <button class="circleButton" id="button8" onclick="button8(true)">8</button>
+    <button class="circleButton" id="button9" onclick="button9(true)">9</button>
+    <button class="circleButton" id="button10" onclick="button10(true)">10</button>
+    <button class="circleButton" id="button11" onclick="button11(true)">11</button>
+    <button class="circleButton" id="button12" onclick="button11(true)">12</button>
+    <button class="circleButton" id="button13" onclick="button11(true)">13</button>
+    <button class="circleButton" id="button14" onclick="button11(true)">14</button>
+    <button class="circleButton" id="button15" onclick="button11(true)">15</button>
+    <button class="circleButton" id="button16" onclick="button11(true)">16</button>
+    <button class="circleButton" id="nextButton" onclick="nextEvent()">></button>
+    <button class="circleButton" id="forwardButton" onclick="forwardEvent()">>></button>
+</div>
+
+<script>
+
+    var headerArray = [];
+    var pageArray = [];
+    var pageArrayAnimated = [];
+    var buttonsArray = [];
+    var codeArray = [];
+    var index = 0;
+
+    buttonsArray.push("button1");
+    buttonsArray.push("button2");
+    buttonsArray.push("button3");
+    buttonsArray.push("button4");
+    buttonsArray.push("button5");
+    buttonsArray.push("button6");
+    buttonsArray.push("button7");
+    buttonsArray.push("button8");
+    buttonsArray.push("button9");
+    buttonsArray.push("button10");
+    buttonsArray.push("button11");
+    buttonsArray.push("button12");
+    buttonsArray.push("button13");
+    buttonsArray.push("button14");
+    buttonsArray.push("button15");
+    buttonsArray.push("button16");
+
+    headerArray.push("Memory Allocation In Java")
+    headerArray.push("C#");
+    headerArray.push("Stack");
+    headerArray.push("Memory");
+    headerArray.push("Integer");
+
+    pageArray.push("button1()");
+    pageArray.push("button2()");
+    pageArray.push("button3()");
+    pageArray.push("button4()");
+    pageArray.push("button5()");
+    pageArray.push("button6()");
+    pageArray.push("button7()");
+    pageArray.push("button8()");
+    pageArray.push("button9()");
+    pageArray.push("button10()");
+    pageArray.push("button11()");
+    pageArray.push("button12()");
+    pageArray.push("button13()");
+    pageArray.push("button14()");
+    pageArray.push("button15()");
+    pageArray.push("button16()");
+
+    pageArrayAnimated.push("button1(false, true)");
+    pageArrayAnimated.push("button2(false, true)");
+    pageArrayAnimated.push("button3(false, true)");
+    pageArrayAnimated.push("button4(false, true)");
+    pageArrayAnimated.push("button5(false, true)");
+    pageArrayAnimated.push("button6(false, true)");
+    pageArrayAnimated.push("button7(false, true)");
+    pageArrayAnimated.push("button8(false, true)");
+    pageArrayAnimated.push("button9(false, true)");
+    pageArrayAnimated.push("button10(false, true)");
+    pageArrayAnimated.push("button11(false, true)");
+    pageArrayAnimated.push("button12(false, true)");
+    pageArrayAnimated.push("button13(false, true)");
+    pageArrayAnimated.push("button14(false, true)");
+    pageArrayAnimated.push("button15(false, true)");
+    pageArrayAnimated.push("button16(false, true)");
+
+    codeArray.push("public void m1(){")
+    codeArray.push("    int x = 20;")
+    codeArray.push("    m2(10);")
+    codeArray.push("    }")
+    codeArray.push(" ")
+
+    codeArray.push("public void m2(int b){")
+    codeArray.push("    boolean c;")
+    codeArray.push("    m3();")
+    codeArray.push("}")
+    codeArray.push(" ")
+
+    codeArray.push("public void m3(){")
+    codeArray.push("    Account ref = new Account();")
+    codeArray.push("}")
+    codeArray.push(" ")
+
+    codeArray.push("class Account")
+    codeArray.push("{")
+    codeArray.push("    int p,q;")
+    codeArray.push("}")
+
+    var s = Snap("#svg");
+    button1();
+
+</script>
+
+</body>
+</html>
