@@ -8,7 +8,7 @@ In this project, I developed a web based educational content with using HTML, Ja
 In the project proposal, I decided to choose Java Memory Management Concept. For this purpose, I implemented total 22 story page including introduction and thanks pages.
 At the top of page there is a header, and at the bottom of page there is a navigation bar. The navigation bar supports basic forward, next, previous, back functions. In addition to these user could jump any step of story if she wants.
 
-![alt text](https://github.com/ugurtosun/EducationPortalNavigationSystem/blob/main/project-ui-design.png?raw=true)
+![alt text](https://github.com/ugurtosun/SWE596-SVG-Project/blob/master/assets/appearance.PNG?raw=true)
 
 ## Design & Technical Details
 
