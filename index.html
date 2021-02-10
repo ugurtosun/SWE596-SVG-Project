@@ -6,6 +6,7 @@
     <script src="Snap.svg-0.5.1/dist/snap.svg-min.js"></script>
     <script src="controller.js"></script>
     <link rel="stylesheet" href="project.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
 </head>
 <body>
 
@@ -13,9 +14,9 @@
     <h1>Welcome Online Education System</h1>
 </div>
 
-<p id="topic"></p>
-
-<svg style="align-content: center" height="600px" width="100%" id="svg"></svg>
+<div style="height: 73vh">
+    <svg style="align-content: center" height="70vh" width="100%" id="svg"></svg>
+</div>
 
 <div class="center" id="controlPanel">
   <!--  <button type="button" id="backButton" class="button" onclick="backEvent()">Back</button>
@@ -41,6 +42,12 @@
     <button class="circleButton" id="button14" onclick="button14(true)">14</button>
     <button class="circleButton" id="button15" onclick="button15(true)">15</button>
     <button class="circleButton" id="button16" onclick="button16(true)">16</button>
+    <button class="circleButton" id="button17" onclick="button17(true)">17</button>
+    <button class="circleButton" id="button18" onclick="button18(true)">18</button>
+    <button class="circleButton" id="button19" onclick="button19(true)">19</button>
+    <button class="circleButton" id="button20" onclick="button20(true)">20</button>
+    <button class="circleButton" id="button21" onclick="button21(true)">21</button>
+    <button class="circleButton" id="button22" onclick="button22(true)">22</button>
     <button class="circleButton" id="nextButton" onclick="nextEvent()">></button>
     <button class="circleButton" id="forwardButton" onclick="forwardEvent()">>></button>
 </div>
@@ -70,8 +77,14 @@
     buttonsArray.push("button14");
     buttonsArray.push("button15");
     buttonsArray.push("button16");
+    buttonsArray.push("button17");
+    buttonsArray.push("button18");
+    buttonsArray.push("button19");
+    buttonsArray.push("button20");
+    buttonsArray.push("button21");
+    buttonsArray.push("button22");
 
-    headerArray.push("Memory Allocation In Java")
+    headerArray.push("Memory Management In Java");
     headerArray.push("C#");
     headerArray.push("Stack");
     headerArray.push("Memory");
@@ -93,6 +106,12 @@
     pageArray.push("button14()");
     pageArray.push("button15()");
     pageArray.push("button16()");
+    pageArray.push("button17()");
+    pageArray.push("button18()");
+    pageArray.push("button19()");
+    pageArray.push("button20()");
+    pageArray.push("button21()");
+    pageArray.push("button22()");
 
     pageArrayAnimated.push("button1(false, true)");
     pageArrayAnimated.push("button2(false, true)");
@@ -110,6 +129,12 @@
     pageArrayAnimated.push("button14(false, true)");
     pageArrayAnimated.push("button15(false, true)");
     pageArrayAnimated.push("button16(false, true)");
+    pageArrayAnimated.push("button17(false, true)");
+    pageArrayAnimated.push("button18(false, true)");
+    pageArrayAnimated.push("button19(false, true)");
+    pageArrayAnimated.push("button20(false, true)");
+    pageArrayAnimated.push("button21(false, true)");
+    pageArrayAnimated.push("button22(false, true)");
 
     codeArray.push("public void m1(){")
     codeArray.push("    int x = 20;")

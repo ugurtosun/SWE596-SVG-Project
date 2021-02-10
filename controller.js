@@ -48,7 +48,6 @@ function nextEvent(){
 
     if(index < pageArray.length -1){
         index = index + 1;
-        document.getElementById("topic").innerText = headerArray[index];
         paintBubble();
         eval(pageArrayAnimated[index]);
     }
@@ -215,32 +214,8 @@ function button2(isDirectCall, isAnimated){
     header4.animate({x:-330}, animationDuration);
     header5.animate({x:-330}, animationDuration);
     header6.animate({x:-330}, animationDuration);
-}
 
-function button3(isDirectCall, isAnimated){
-
-    index = 2;
-    var newIndex = index;
-    var animationDuration = 0;
-    paintBubble();
-
-    if(isDirectCall){
-        initialize();
-        for(let i = 0; i <= newIndex; i++){
-            if(i === newIndex){
-                eval(pageArrayAnimated[i]);
-                break;
-            }
-            eval(pageArray[i]);
-        }
-        return;
-    }
-
-    if(isAnimated){
-        animationDuration = 1000;
-    }
-
-    var line = s.line(910, 350, 910, 350);
+    line = s.line(910, 350, 910, 350);
 
     line.attr({
         stroke: "#000",
@@ -249,13 +224,13 @@ function button3(isDirectCall, isAnimated){
 
     line.animate({x2: 410}, animationDuration);
 
-    var line1 = "* Store Objects";
-    var line2 = "* Bigger Memory Than Stack";
-    var line3 = "* Elements Are Globally Accessible";
+    line1 = "* Store Objects";
+    line2 = "* Bigger Memory Than Stack";
+    line3 = "* Elements Are Globally Accessible";
 
-    var header = s.text(1000, 400, line1);
-    var header2 = s.text(1000, 440, line2);
-    var header3 = s.text(1000, 480, line3);
+    header = s.text(1000, 400, line1);
+    header2 = s.text(1000, 440, line2);
+    header3 = s.text(1000, 480, line3);
 
     header.attr({
         'fill' : 'black',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':28
@@ -272,11 +247,10 @@ function button3(isDirectCall, isAnimated){
     header3.animate({x:420}, animationDuration);
 }
 
-function button4(isDirectCall, isAnimated){
+function button3(isDirectCall, isAnimated){
 
-    index = 3;
+    index = 2;
     var newIndex = index;
-    var animationDuration = 0;
     paintBubble();
 
     if(isDirectCall){
@@ -289,10 +263,6 @@ function button4(isDirectCall, isAnimated){
             eval(pageArray[i]);
         }
         return;
-    }
-
-    if(isAnimated){
-        animationDuration = 1000;
     }
 
     var rect1 = s.rect(-900, 350, 300, 400, 20);
@@ -308,12 +278,11 @@ function button4(isDirectCall, isAnimated){
     stackHeader.attr({
         'fill' : 'black',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':34
     });
-
 }
 
-function button5(isDirectCall, isAnimated){
+function button4(isDirectCall, isAnimated){
 
-    index = 4;
+    index = 3;
     var newIndex = index;
     var animationDuration = 0;
     paintBubble();
@@ -353,9 +322,9 @@ function button5(isDirectCall, isAnimated){
 
 }
 
-function button6(isDirectCall, isAnimated) {
+function button5(isDirectCall, isAnimated){
 
-    index = 5;
+    index = 4;
     var newIndex = index;
     var animationDuration1 = 0;
     var animationDuration2 = 0;
@@ -408,9 +377,9 @@ function button6(isDirectCall, isAnimated) {
 
 }
 
-function button7(isDirectCall, isAnimated){
+function button6(isDirectCall, isAnimated){
 
-    index = 6;
+    index = 5;
     var newIndex = index;
     var animationDuration = 0;
     paintBubble();
@@ -468,9 +437,9 @@ function button7(isDirectCall, isAnimated){
     rect2Text.animate({x:1240, y: 580}, animationDuration);
 }
 
-function button8(isDirectCall, isAnimated) {
+function button7(isDirectCall, isAnimated) {
 
-    index = 7;
+    index = 6;
     var newIndex = index;
     var animationDuration1 = 0;
     var animationDuration2 = 0;
@@ -530,9 +499,9 @@ function button8(isDirectCall, isAnimated) {
 
 }
 
-function button9(isDirectCall, isAnimated){
+function button8(isDirectCall, isAnimated){
 
-    index = 8;
+    index = 7;
     var newIndex = index;
     var animationDuration1 = 0;
     var animationDuration2 = 0;
@@ -573,9 +542,9 @@ function button9(isDirectCall, isAnimated){
 
 }
 
-function button10(isDirectCall, isAnimated){
+function button9(isDirectCall, isAnimated){
 
-    index = 9;
+    index = 8;
     var newIndex = index;
     var animationDuration = 0;
     paintBubble();
@@ -612,9 +581,9 @@ function button10(isDirectCall, isAnimated){
 
 }
 
-function button11(isDirectCall, isAnimated){
+function button10(isDirectCall, isAnimated){
 
-    index = 10;
+    index = 9;
     var newIndex = index;
     var animationDuration = 0;
     paintBubble();
@@ -661,7 +630,60 @@ function button11(isDirectCall, isAnimated){
         s.text(-600,250 + 32*i, codeArray[i]).attr({id: 'codeLine' + i,"style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
     }
 
+
+}
+
+function button11(isDirectCall, isAnimated){
+
+    index = 10;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
     highlightCodeLine(0);
+
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    var codeStack = s.rect(400, 250, 300, 600, 40);
+    codeStack.attr({
+        id : 'codeStack',
+        fill: 'orange',
+        stroke: 'orange',
+        strokeOpacity: .3,
+        strokeWidth: 10
+    });
+
+    var textStack = s.text(500, 330, "STACK").attr({id: 'textStack', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
+
+    var line = s.line(400, 700, 400, 700);
+
+    line.attr({
+        id: 'lineM1',
+        stroke: "#000",
+        strokeWidth: 2
+    });
+
+    line.animate({x2: 700}, animationDuration);
+
+    var textM1 = s.text(430, 780, "m1").attr({id: 'textM1', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+    var g = s.g();
+    var image = g.image("assets/heap.svg", 850, 300, 400,400);
+    var textHeap = s.text(900, 330, "HEAP").attr({id: 'textHeap', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
+
 }
 
 function button12(isDirectCall, isAnimated){
@@ -689,78 +711,7 @@ function button12(isDirectCall, isAnimated){
         animationDuration = 1000;
     }
 
-    var codeStack = s.rect(400, 250, 300, 600, 40);
-    codeStack.attr({
-        id : 'codeStack',
-        fill: 'orange',
-        stroke: 'orange',
-        strokeOpacity: .3,
-        strokeWidth: 10
-    });
-
-    var textStack = s.text(500, 330, "STACK").attr({id: 'textStack', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
-
-    var line = s.line(400, 700, 400, 700);
-
-    line.attr({
-        stroke: "#000",
-        strokeWidth: 2
-    });
-
-    line.animate({x2: 700}, animationDuration);
-
-    var textM1 = s.text(430, 780, "m1").attr({id: 'textM1', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
     var textX = s.text(600, 780, "x").attr({id: 'textX', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
-
-
-    var line2 = s.line(400, 600, 400, 600);
-    line2.attr({
-        stroke: "#000",
-        strokeWidth: 2
-    });
-    line2.animate({x2: 700}, animationDuration);
-
-    var textM2= s.text(430, 660, "m2").attr({id: 'textM2', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
-
-    var textBC = s.text(600, 660, "b   c").attr({id: 'textBC', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
-
-    var line3 = s.line(400, 500, 400, 500);
-    line3.attr({
-        stroke: "#000",
-        strokeWidth: 2
-    });
-    line3.animate({x2: 700}, animationDuration);
-
-    var textM3= s.text(430, 560, "m3").attr({id: 'textM3', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
-
-    var textRef = s.text(600, 560, "ref").attr({id: 'textRef', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
-
-    var g = s.g();
-    var image = g.image("assets/heap.svg", 850, 300, 400,400);
-
-
-    var textHeap = s.text(900, 330, "HEAP").attr({id: 'textHeap', "style":"white-space:pre", 'fill' : 'black',  'stroke': 'black', 'stroke-width': 0.2, 'font-size':32});
-
-    var rectangleBackground1 = s.rect(980, 430, 150, 70, 10);
-
-    rectangleBackground1.attr({
-        id : 'object',
-        fill: 'yellow',
-        stroke: 'yellow',
-        strokeOpacity: .3,
-        strokeWidth: 10
-    });
-
-
-    var textPQ = s.text(1000, 470, "p       q").attr({id: 'textPQ', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
-
-    var line3 = s.line(700, 550, 700, 470);
-    line3.attr({
-        stroke: "blue",
-        strokeWidth: 10
-    });
-    line3.animate({x2: 980}, animationDuration);
-
 
 }
 
@@ -783,12 +734,11 @@ function button13(isDirectCall, isAnimated){
         return;
     }
 
-    highlightCodeLine(2);
-
     if(isAnimated){
         animationDuration = 1000;
     }
 
+    highlightCodeLine(2);
 }
 
 function button14(isDirectCall, isAnimated){
@@ -810,11 +760,23 @@ function button14(isDirectCall, isAnimated){
         return;
     }
 
-    highlightCodeLine(3);
-
     if(isAnimated){
         animationDuration = 1000;
     }
+
+
+    highlightCodeLine(5);
+
+    var line2 = s.line(400, 600, 400, 600);
+    line2.attr({
+        id: 'lineM2',
+        stroke: "#000",
+        strokeWidth: 2
+    });
+    line2.animate({x2: 700}, animationDuration);
+
+    var textM2= s.text(430, 660, "m2").attr({id: 'textM2', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+    var textB = s.text(600, 660, "b").attr({id: 'textB', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
 }
 
 function button15(isDirectCall, isAnimated){
@@ -836,17 +798,39 @@ function button15(isDirectCall, isAnimated){
         return;
     }
 
-    highlightCodeLine(4);
+    highlightCodeLine(6);
 
     if(isAnimated){
         animationDuration = 1000;
     }
 
+    var textC = s.text(640, 660, "c").attr({id: 'textC', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
 }
 
 function button16(isDirectCall, isAnimated){
 
     index = 15;
+    var newIndex = index;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
+    highlightCodeLine(7);
+}
+
+function button17(isDirectCall, isAnimated){
+
+    index = 16;
     var newIndex = index;
     var animationDuration = 0;
     paintBubble();
@@ -863,10 +847,228 @@ function button16(isDirectCall, isAnimated){
         return;
     }
 
-    highlightCodeLine(5);
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    highlightCodeLine(10);
+
+    var line3 = s.line(400, 500, 400, 500);
+    line3.attr({
+        id: "lineM3",
+        stroke: "#000",
+        strokeWidth: 2
+    });
+    line3.animate({x2: 700}, animationDuration);
+
+    var textM3= s.text(430, 560, "m3").attr({id: 'textM3', "style":"white-space:pre", 'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2, 'font-size':32});
+
+}
+
+function button18(isDirectCall, isAnimated){
+
+    index = 17;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
 
     if(isAnimated){
         animationDuration = 1000;
     }
+
+    highlightCodeLine(11);
+
+    var textRef = s.text(600, 560, "ref").attr({id: 'textRef', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+    var rectangleBackground1 = s.rect(980, 430, 150, 70, 10);
+
+    rectangleBackground1.attr({
+        id : 'object',
+        fill: 'yellow',
+        stroke: 'yellow',
+        strokeOpacity: .3,
+        strokeWidth: 10
+    });
+
+    var textPQ = s.text(1000, 470, "p       q").attr({id: 'textPQ', "style":"white-space:pre", 'fill' : 'red',  'stroke': 'red', 'stroke-width': 0.2, 'font-size':40});
+
+    var line3 = s.line(700, 550, 700, 470);
+    line3.attr({
+        id: "line3",
+        stroke: "blue",
+        strokeWidth: 10
+    });
+    line3.animate({x2: 980}, animationDuration);
+}
+
+function button19(isDirectCall, isAnimated){
+
+    index = 18;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    highlightCodeLine(12);
+
+    document.getElementById("line3").remove();
+    document.getElementById("lineM3").remove();
+    document.getElementById("textRef").remove();
+    document.getElementById("textM3").remove();
+
+    var g = s.g();
+    var image2 = g.image("assets/garbage-collector.svg", 700, -20, 600,700 );
+
+    setTimeout(function (){
+        image2.animate({height:0, width:0}, 2000)
+        document.getElementById("textPQ").remove();
+        document.getElementById("object").classList.add("animate")
+    },animationDuration);
+}
+
+function button20(isDirectCall, isAnimated){
+
+    index = 19;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    highlightCodeLine(8);
+
+    document.getElementById("textM2").remove();
+    document.getElementById("textB").remove();
+    document.getElementById("textC").remove();
+    document.getElementById("lineM2").remove();
+
+}
+
+function button21(isDirectCall, isAnimated){
+
+    index = 20;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    highlightCodeLine(3);
+
+    document.getElementById("textX").remove();
+    document.getElementById("textM1").remove();
+    document.getElementById("lineM1").remove();
+
+}
+
+function button22(isDirectCall, isAnimated){
+
+    index = 21;
+    var newIndex = index;
+    var animationDuration = 0;
+    paintBubble();
+
+    if(isDirectCall){
+        initialize();
+        for(let i = 0; i <= newIndex; i++){
+            if(i === newIndex){
+                eval(pageArrayAnimated[i]);
+                break;
+            }
+            eval(pageArray[i]);
+        }
+        return;
+    }
+
+    if(isAnimated){
+        animationDuration = 1000;
+    }
+
+    initialize();
+
+    setTimeout( function() {
+
+        var logoTitle = 'Thanks For Attention';
+        var logoRandom = '';
+        var logoTitleContainer = s.text(-950, '55%', '');
+        var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+        logoTitleContainer.attr({
+            fontSize: 200,
+            fontFamily: 'Orbitron',
+            fontWeight: '600'
+        });
+
+        function generateRandomTitle(i, logoRandom) {
+            setTimeout( function() {
+                logoTitleContainer.attr({ text: logoRandom });
+                }, i*120 );
+        }
+
+        for( var i=0; i < logoTitle.length+1; i++ ) {
+            logoRandom = logoTitle.substr(0, i);
+            for( var j=i; j < logoTitle.length; j++ ) {
+                logoRandom += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            generateRandomTitle(i, logoRandom);
+            logoRandom = '';
+        }}, 200 );
+
+    var g = s.g();
+    var image = g.image("assets/smile.svg", 1200, 70, 300,300 );
 
 }
