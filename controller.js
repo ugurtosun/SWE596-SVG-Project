@@ -58,7 +58,6 @@ function previousEvent(){
     if(index > 0){
         index = index - 1;
         var newIndex = index;
-        document.getElementById("topic").innerText = headerArray[index];
         initialize();
         paintBubble();
 
@@ -493,7 +492,6 @@ function button7(isDirectCall, isAnimated) {
     },animationDuration2);
 
     setTimeout(function (){
-        document.getElementById('sad').remove();
         document.getElementById('rectTextPop').remove();
     },animationDuration3)
 
@@ -918,6 +916,7 @@ function button19(isDirectCall, isAnimated){
     index = 18;
     var newIndex = index;
     var animationDuration = 0;
+    var animationDuration1 = 0;
     paintBubble();
 
     if(isDirectCall){
@@ -934,6 +933,7 @@ function button19(isDirectCall, isAnimated){
 
     if(isAnimated){
         animationDuration = 1000;
+        animationDuration1 = 2000;
     }
 
     highlightCodeLine(12);
@@ -946,11 +946,17 @@ function button19(isDirectCall, isAnimated){
     var g = s.g();
     var image2 = g.image("assets/garbage-collector.svg", 700, -20, 600,700 );
 
-    setTimeout(function (){
-        image2.animate({height:0, width:0}, 2000)
+    if(isAnimated){
+        setTimeout(function (){
+            image2.animate({height:0, width:0}, animationDuration1)
+            document.getElementById("textPQ").remove();
+            document.getElementById("object").classList.add("animate")
+        },animationDuration);
+    }else{
+        image2.remove();
         document.getElementById("textPQ").remove();
-        document.getElementById("object").classList.add("animate")
-    },animationDuration);
+        document.getElementById("object").remove();
+    }
 }
 
 function button20(isDirectCall, isAnimated){

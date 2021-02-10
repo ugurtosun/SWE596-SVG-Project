@@ -51,5 +51,5 @@ This project.css file is the main css file contains all css staff.
 
 #### **assets folder**
 
-In this folder, there are several ready-use svg files. A part of them is drawn by me, some of them were ready to use from open source.
+In this folder, there are several ready-use svg files. A part of them is drawn by me, some of them were ready to use from non-copyright sources.
 
