@@ -493,6 +493,7 @@ function button7(isDirectCall, isAnimated) {
 
     setTimeout(function (){
         document.getElementById('rectTextPop').remove();
+        document.getElementById('sad').remove();
     },animationDuration3)
 
 }
